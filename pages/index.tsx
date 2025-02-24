@@ -27,6 +27,7 @@ type Props = {
   socials: Social[];
 };
 
+
 const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
   return (
     <div
@@ -37,22 +38,22 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="/car.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="/water.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="/water.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
-        <title>{"Mitch's Portfolio"}</title>
+        <title>{"Abhinav's Portfolio"}</title>
       </Head>
 
       {/* Google Analytics */}
@@ -65,11 +66,14 @@ const Home = ({ pageInfo, experiences, projects, skills, socials }: Props) => {
            function gtag(){dataLayer.push(arguments);}
            gtag('js', new Date());
            gtag('config', 'G-LV1LN9VBT0')`}
-        ;
       </Script>
 
       {/* Header */}
-      <Header socials={socials} />
+      <Header 
+  linkedinUrl="https://www.linkedin.com/in/abhinav-kangle-523773249" 
+  githubUrl="https://github.com/akaabhinav002" 
+/>
+
 
       {/* Hero */}
       <section id="hero" className="snap-start">

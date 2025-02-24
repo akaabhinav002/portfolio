@@ -1,14 +1,16 @@
+export const fetchProjects = async () => {
+    if (!process.env.NEXT_PUBLIC_API_BASE_URL) {
+        throw new Error("⚠ ERROR: NEXT_PUBLIC_API_BASE_URL is not defined. Check your .env.local file.");
+    }
 
+    console.log("✅ API Base URL:", process.env.NEXT_PUBLIC_API_BASE_URL); // Debugging
 
-import { Project } from "../typings";
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/getProjects`);
 
-export const fetchProjects = async() => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/api/getProjects`);
+    if (!res.ok) {
+        throw new Error(`⚠ ERROR: Failed to fetch /api/getProjects - ${res.status} ${res.statusText}`);
+    }
 
     const data = await res.json();
-    const projects: Project[] = data.projects;
-
-    // console.log('fetching', projects);
-
-    return projects;
-}
+    return data.projects;
+};
