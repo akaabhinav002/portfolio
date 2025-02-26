@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "standalone", // Ensures Next.js can generate proper build files
+  output: "expert", // Ensures Next.js can generate proper build files
  
 };
 
