@@ -6,9 +6,5 @@
     { "src": "/(.*)", "dest": "/index.js" }
 
   ]
-{
-  "buildCommand": "npm install --legacy-peer-deps && npm run build",
-  "installCommand": "npm install --legacy-peer-deps"
-}
 
 }
